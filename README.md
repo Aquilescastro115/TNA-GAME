@@ -8,7 +8,6 @@ Built with Godot Engine.
 
 - Ant colony simulation
 - Food gathering
-- Pheromone system
 - Ant roles (workers, soldiers)
 
 ## Team
