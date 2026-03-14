@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dherjans7h65h"]
+
+[ext_resource type="Texture2D" uid="uid://ryjitckyg2kh" path="res://Assets/Ant01.png" id="1_7oh8p"]
+
+[node name="Ant" type="Node2D" unique_id=91645211]
+
+[node name="Ant01" type="Sprite2D" parent="." unique_id=212511793]
+texture = ExtResource("1_7oh8p")
+centered = false

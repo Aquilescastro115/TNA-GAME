@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bvrwsv1air0b0"]
+
+[ext_resource type="Texture2D" uid="uid://h7jnx1a541ac" path="res://Assets/Background01.png" id="1_lc1oi"]
+[ext_resource type="PackedScene" uid="uid://cii0yrq4syrgm" path="res://Scenes/Prefabs/Nest.tscn" id="2_8od7v"]
+[ext_resource type="PackedScene" uid="uid://dherjans7h65h" path="res://Scenes/Prefabs/Ant.tscn" id="3_qc4db"]
+
+[node name="Test" type="Node2D" unique_id=11896398]
+
+[node name="Background01" type="Sprite2D" parent="." unique_id=1197882343]
+texture = ExtResource("1_lc1oi")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Nest" parent="." unique_id=2015448920 instance=ExtResource("2_8od7v")]
+position = Vector2(80, 128)
+
+[node name="Ant" parent="." unique_id=91645211 instance=ExtResource("3_qc4db")]
+position = Vector2(112, 160)
