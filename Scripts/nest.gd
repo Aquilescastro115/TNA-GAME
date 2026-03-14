@@ -10,6 +10,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+#Esta funcion se dispara al apretar el nido
 func _on_touch_screen_button_released() -> void:
 	print("Hola")
+
+#todo Interfaz grafica de nido
