@@ -30,11 +30,23 @@ position = Vector2(80, 128)
 [node name="Ant" parent="." unique_id=91645211 instance=ExtResource("3_qc4db")]
 position = Vector2(112, 160)
 
-[node name="Queen" parent="." unique_id=1470953478 instance=ExtResource("4_ys1qc")]
-position = Vector2(64, 160)
-
 [node name="Bush" parent="." unique_id=1013203928 instance=ExtResource("6_i3aeo")]
 position = Vector2(48, 192)
+
+[node name="Bush2" parent="." unique_id=2022815667 instance=ExtResource("6_i3aeo")]
+position = Vector2(112, 224)
+
+[node name="Bush3" parent="." unique_id=1764282686 instance=ExtResource("6_i3aeo")]
+position = Vector2(64, 240)
+
+[node name="Bush4" parent="." unique_id=1070898060 instance=ExtResource("6_i3aeo")]
+position = Vector2(48, 80)
+
+[node name="Bush5" parent="." unique_id=903093328 instance=ExtResource("6_i3aeo")]
+position = Vector2(112, 64)
+
+[node name="Queen" parent="." unique_id=1470953478 instance=ExtResource("4_ys1qc")]
+position = Vector2(64, 160)
 
 [node name="UI" type="Control" parent="." unique_id=1757722774]
 layout_mode = 3
