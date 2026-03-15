@@ -1,12 +1,14 @@
-#Lista de cosas por hacer
+# Lista de cosas por hacer
 
-##Trabajar en flujo de juego
+## Trabajar en flujo de juego
 
 Inicio --> Reina en el mapa, spawn aleatorio de recursos, enemigos y areas -->
 Reina recoge suministros, compra tuneles para aumentar capacidad, crear obreros y soldados --> automatizacion de recoleccion de recursos --> exploracion y creacion de colonias nuevas,
 preparando la conquista del mapa --> si terminas todo puedes reencarnar con bonus al inicio
 
 Para trabajar en esto hay que cumplir ciertos objetivos, marca con una flecha y parentesis tu nombre si estas trabajando en eso actualmente.
+
+## Objetivos (Checklist)
 
 - [x] Hacer reina
 - [ ] Hacer hormiga
