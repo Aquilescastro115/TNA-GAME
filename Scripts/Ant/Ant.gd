@@ -48,3 +48,17 @@ func change_direction():
 
 	var directions = [Vector2.RIGHT,Vector2.LEFT,Vector2.UP,Vector2.DOWN]
 	direction = directions.pick_random()
+
+func detect_food():
+
+	var foods = get_tree().get_nodes_in_group("food")
+
+	for food in foods:
+
+		if global_position.distance_to(food.global_position) < 30:
+
+			state = State.RETURN_HOME
+			nest_position = food.global_position
+
+			var system = get_node("/root/World/FoodDetectionSystem")
+			system.notify_food_found(food.global_position)

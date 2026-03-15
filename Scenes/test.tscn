@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://h7jnx1a541ac" path="res://Assets/Background01.png" id="1_lc1oi"]
 [ext_resource type="PackedScene" uid="uid://cii0yrq4syrgm" path="res://Scenes/Prefabs/Nest.tscn" id="2_8od7v"]
 [ext_resource type="PackedScene" uid="uid://dherjans7h65h" path="res://Scenes/Prefabs/Ant.tscn" id="3_qc4db"]
-[ext_resource type="PackedScene" uid="uid://oq67xl35e1yo" path="res://Scenes/Prefabs/Queen.tscn" id="4_ys1qc"]
+[ext_resource type="PackedScene" path="res://Scenes/Prefabs/Queen.tscn" id="4_ys1qc"]
 [ext_resource type="PackedScene" uid="uid://dl24rliymdbms" path="res://Scenes/Prefabs/Bush.tscn" id="6_i3aeo"]
 [ext_resource type="FontFile" uid="uid://rxi6iu3lucpd" path="res://Assets/Fonts/Axolotl.ttf" id="7_5wyu1"]
 
