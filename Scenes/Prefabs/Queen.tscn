@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://oq67xl35e1yo"]
+
+[ext_resource type="Script" uid="uid://dear4pih4do8g" path="res://Scripts/Queen/queen.gd" id="1_xbvxy"]
+[ext_resource type="Texture2D" uid="uid://dfnnel6w7dknr" path="res://Assets/Ant00.png" id="2_xbvxy"]
+[ext_resource type="Script" uid="uid://dio4ghjcneoja" path="res://Scripts/Queen/detector.gd" id="3_gksri"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbvxy"]
+size = Vector2(8, 8)
+
+[node name="Queen" type="Node2D" unique_id=91645211]
+script = ExtResource("1_xbvxy")
+
+[node name="Ant00" type="Sprite2D" parent="." unique_id=212511793]
+texture = ExtResource("2_xbvxy")
+
+[node name="Detector" type="Area2D" parent="." unique_id=745498542]
+script = ExtResource("3_gksri")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=1377796880]
+shape = SubResource("RectangleShape2D_xbvxy")
+
+[connection signal="input_event" from="Detector" to="Detector" method="_on_input_event"]
