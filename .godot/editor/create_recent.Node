@@ -1,3 +1,7 @@
+Label
+Panel
+HBoxContainer
+Control
 CollisionShape2D
 Area2D
 TouchScreenButton

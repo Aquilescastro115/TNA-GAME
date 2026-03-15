@@ -1,6 +1,10 @@
 extends Node2D
 
 @onready var queen = $Queen
+@onready var food_label = $UI/HBoxContainer/FoodVar
+
+func _ready():
+	update_food()
 
 func _input(event):
 
@@ -35,3 +39,6 @@ func handle_click(pos):
 	queen.target_bush = null
 	queen.moving = true
 	queen.selected = false
+
+func update_food():
+	food_label.text = str(GameData.food)

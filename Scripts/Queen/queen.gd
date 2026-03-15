@@ -58,7 +58,7 @@ func collect_bush():
 
 	if target_bush and target_bush.collect():
 		GameData.food += 1
-		print(GameData.food)
+		get_parent().update_food()
 	else:
 		target_bush = null
 		collecting = false

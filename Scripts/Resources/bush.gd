@@ -6,7 +6,6 @@ func _ready():
 	add_to_group("food")
 
 func collect():
-	print("intentando recolectar")
 	if food_amount > 0:
 		food_amount -= 1
 
