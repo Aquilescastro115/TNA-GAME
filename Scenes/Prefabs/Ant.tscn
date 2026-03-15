@@ -8,4 +8,3 @@ script = ExtResource("1_34hxo")
 
 [node name="Ant01" type="Sprite2D" parent="." unique_id=212511793]
 texture = ExtResource("1_7oh8p")
-centered = false
