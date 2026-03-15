@@ -8,6 +8,11 @@ Cómo en age of empire se construyen casas para tener más población, al apreta
 
 --------------------------
 
+Mecanica nova:
+- La deteccion de un objeto (comida probable) por una hormiga, llamara la atencion del hormigero 
+
+--------------------------
+
 Inicio:
 - Empiezas solamente moviendo la hormiga reina, y con la hormiga reina creas homigeros y otras hormigas.
 
