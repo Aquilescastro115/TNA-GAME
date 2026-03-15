@@ -1,9 +1,11 @@
+TouchScreenButton
+TextureRect
 Label
-Panel
+ColorRect
 HBoxContainer
 Control
+Panel
 CollisionShape2D
 Area2D
-TouchScreenButton
 TileMap
 Node2D
