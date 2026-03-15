@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bvrwsv1air0b0"]
 
-[ext_resource type="Script" path="res://Scripts/test.gd" id="1_35xla"]
+[ext_resource type="Script" uid="uid://du01i71kslgye" path="res://Scripts/test.gd" id="1_35xla"]
 [ext_resource type="Texture2D" uid="uid://h7jnx1a541ac" path="res://Assets/Background01.png" id="1_lc1oi"]
 [ext_resource type="PackedScene" uid="uid://cii0yrq4syrgm" path="res://Scenes/Prefabs/Nest.tscn" id="2_8od7v"]
 [ext_resource type="PackedScene" uid="uid://dherjans7h65h" path="res://Scenes/Prefabs/Ant.tscn" id="3_qc4db"]
-[ext_resource type="PackedScene" path="res://Scenes/Prefabs/Queen.tscn" id="4_ys1qc"]
+[ext_resource type="PackedScene" uid="uid://oq67xl35e1yo" path="res://Scenes/Prefabs/Queen.tscn" id="4_ys1qc"]
+[ext_resource type="PackedScene" uid="uid://dl24rliymdbms" path="res://Scenes/Prefabs/Bush.tscn" id="6_i3aeo"]
 
 [node name="Test" type="Node2D" unique_id=11896398]
 script = ExtResource("1_35xla")
@@ -22,3 +23,6 @@ position = Vector2(112, 160)
 
 [node name="Queen" parent="." unique_id=1470953478 instance=ExtResource("4_ys1qc")]
 position = Vector2(64, 160)
+
+[node name="Bush" parent="." unique_id=1013203928 instance=ExtResource("6_i3aeo")]
+position = Vector2(48, 192)

@@ -4,14 +4,34 @@ extends Node2D
 
 func _input(event):
 
-	if queen.selected:
+	if not queen.selected:
+		return
 
-		if event is InputEventScreenTouch and event.pressed:
-			queen.target_position = event.position
+	if event is InputEventScreenTouch and event.pressed:
+		handle_click(event.position)
+
+	if event is InputEventMouseButton and event.pressed:
+		handle_click(event.position)
+
+
+func handle_click(pos):
+
+	for bush in get_tree().get_nodes_in_group("food"):
+
+		var sprite = bush.get_node("Bush")
+		var size = sprite.texture.get_size() * sprite.scale
+
+		var rect = Rect2(bush.global_position, size)
+
+		if rect.has_point(pos):
+
+			queen.target_position = bush.global_position + size / 2
+			queen.target_bush = bush
 			queen.moving = true
 			queen.selected = false
+			return
 
-		if event is InputEventMouseButton and event.pressed:
-			queen.target_position = event.position
-			queen.moving = true
-			queen.selected = false
+	queen.target_position = pos
+	queen.target_bush = null
+	queen.moving = true
+	queen.selected = false
