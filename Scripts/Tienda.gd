@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,8 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-#Esta funcion se dispara al apretar el nido
-func _on_touch_screen_button_released() -> void:
-	$"../Tienda".show()
 
-#todo Interfaz grafica de nido
+func _on_salir_button_released() -> void:
+	$".".hide()

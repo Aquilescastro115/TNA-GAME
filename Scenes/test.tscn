@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://oq67xl35e1yo" path="res://Scenes/Prefabs/Queen.tscn" id="4_ys1qc"]
 [ext_resource type="PackedScene" uid="uid://dl24rliymdbms" path="res://Scenes/Prefabs/Bush.tscn" id="6_i3aeo"]
 [ext_resource type="FontFile" uid="uid://rxi6iu3lucpd" path="res://Assets/Fonts/Axolotl.ttf" id="7_5wyu1"]
+[ext_resource type="Texture2D" uid="uid://rjakjy260biq" path="res://Assets/Nest01.png" id="8_2cgwh"]
+[ext_resource type="Script" uid="uid://cqhhgarubw81u" path="res://Scripts/Tienda.gd" id="8_iaow0"]
+[ext_resource type="Texture2D" uid="uid://ryjitckyg2kh" path="res://Assets/Ant01.png" id="9_iaow0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3aeo"]
 bg_color = Color(0.18431373, 0.12941177, 0.06666667, 0.8117647)
@@ -15,6 +18,9 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpfo2"]
+size = Vector2(16, 16)
 
 [node name="Test" type="Node2D" unique_id=11896398]
 script = ExtResource("1_35xla")
@@ -70,6 +76,20 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
 theme_override_fonts/font = ExtResource("7_5wyu1")
 theme_override_font_sizes/font_size = 21
+text = "Cap:"
+
+[node name="CapVar" type="Label" parent="UI/HBoxContainer" unique_id=355578653]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "000"
+
+[node name="Label2" type="Label" parent="UI/HBoxContainer" unique_id=1429810204]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
 text = "Food:"
 
 [node name="FoodVar" type="Label" parent="UI/HBoxContainer" unique_id=688113014]
@@ -78,3 +98,124 @@ theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
 theme_override_fonts/font = ExtResource("7_5wyu1")
 theme_override_font_sizes/font_size = 21
 text = "000"
+
+[node name="Tienda" type="Control" parent="." unique_id=240955525]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 176.0
+offset_bottom = 320.0
+script = ExtResource("8_iaow0")
+
+[node name="ColorRect" type="ColorRect" parent="Tienda" unique_id=2113358354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7607843)
+
+[node name="ColorRect" type="ColorRect" parent="Tienda/ColorRect" unique_id=1724972130]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 48.0
+offset_right = 144.0
+offset_bottom = 288.0
+
+[node name="Tuneles" type="TextureRect" parent="Tienda/ColorRect/ColorRect" unique_id=1526324665]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("8_2cgwh")
+expand_mode = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Tienda/ColorRect/ColorRect/Tuneles" unique_id=233490633]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_qpfo2")
+shape_centered = false
+
+[node name="Label" type="Label" parent="Tienda/ColorRect/ColorRect/Tuneles" unique_id=1095404708]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 90.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "Tuneles"
+horizontal_alignment = 1
+
+[node name="Obreras" type="TextureRect" parent="Tienda/ColorRect/ColorRect" unique_id=900761137]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 32.0
+offset_bottom = 48.0
+texture = ExtResource("9_iaow0")
+expand_mode = 1
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Tienda/ColorRect/ColorRect/Obreras" unique_id=1266368957]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_qpfo2")
+shape_centered = false
+
+[node name="Label" type="Label" parent="Tienda/ColorRect/ColorRect/Obreras" unique_id=1187166339]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 90.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "Obreras"
+horizontal_alignment = 1
+
+[node name="Salir" type="TextureRect" parent="Tienda/ColorRect/ColorRect" unique_id=403469338]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 210.0
+offset_right = 80.0
+offset_bottom = 226.0
+texture = ExtResource("9_iaow0")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Tienda/ColorRect/ColorRect/Salir" unique_id=2094337050]
+layout_mode = 0
+offset_left = 19.0
+offset_top = -1.0
+offset_right = 106.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0, 0, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "Salir"
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Tienda/ColorRect/ColorRect/Salir" unique_id=782503607]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_qpfo2")
+shape_centered = false
+
+[node name="ColorRect2" type="ColorRect" parent="Tienda/ColorRect" unique_id=1422796404]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 144.0
+offset_bottom = 48.0
+color = Color(0, 0.51723963, 0.5195704, 1)
+
+[node name="Label" type="Label" parent="Tienda/ColorRect/ColorRect2" unique_id=1933602271]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "Tienda del nido"
+horizontal_alignment = 1
+
+[connection signal="released" from="Tienda/ColorRect/ColorRect/Salir/TouchScreenButton" to="Tienda" method="_on_salir_button_released"]

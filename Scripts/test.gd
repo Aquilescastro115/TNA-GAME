@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var queen = $Queen
 @onready var food_label = $UI/HBoxContainer/FoodVar
-
+@onready var cap_label = $UI/HBoxContainer/CapVar
 func _ready():
 	update_food()
 
@@ -42,3 +42,7 @@ func handle_click(pos):
 
 func update_food():
 	food_label.text = str(GameData.food)
+
+func update_cap():
+	cap_label.text = str(GameData.capacity)
+	
