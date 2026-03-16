@@ -13,3 +13,13 @@ func _process(delta: float) -> void:
 
 func _on_salir_button_released() -> void:
 	$".".hide()
+
+
+func _on_tuneles_button_released() -> void:
+	GameData.capacity +=1
+	get_parent().update_cap()
+
+
+func _on_obreras_button_released() -> void:
+	GameData.capacity -= 1
+	get_parent().spawn_ant()

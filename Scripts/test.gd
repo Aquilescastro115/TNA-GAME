@@ -3,6 +3,9 @@ extends Node2D
 @onready var queen = $Queen
 @onready var food_label = $UI/HBoxContainer/FoodVar
 @onready var cap_label = $UI/HBoxContainer/CapVar
+@export var ant_scene: PackedScene
+@onready var nest = $Nest
+
 func _ready():
 	update_food()
 
@@ -45,4 +48,8 @@ func update_food():
 
 func update_cap():
 	cap_label.text = str(GameData.capacity)
-	
+
+func spawn_ant():
+	var ant = ant_scene.instantiate()
+	ant.global_position = nest.global_position
+	add_child(ant)
