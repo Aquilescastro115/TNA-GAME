@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bwdb7lvffwmpm"]
+
+[ext_resource type="Script" uid="uid://b3ke57gssnpic" path="res://Scripts/Resources/mud.gd" id="1_fo8df"]
+[ext_resource type="Texture2D" uid="uid://dmttfy7qeqc1t" path="res://Assets/mud.png" id="1_jlw7u"]
+
+[node name="Mud" type="Node2D" unique_id=1546510766]
+script = ExtResource("1_fo8df")
+
+[node name="Mud" type="Sprite2D" parent="." unique_id=1523651614]
+texture = ExtResource("1_jlw7u")
+centered = false

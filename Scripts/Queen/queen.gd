@@ -6,8 +6,10 @@ var selected = false
 var target_position = Vector2.ZERO
 var moving = false
 var target_bush = null
+var target_mud = null
 
-var collecting = false
+var collecting_bush = false
+var collecting_mud = false
 var collect_timer = 0.0
 var collect_interval = 1.0
 
@@ -18,7 +20,7 @@ func _ready():
 
 func _process(delta):
 
-	if collecting:
+	if collecting_bush:
 
 		collect_timer += delta
 
@@ -27,7 +29,16 @@ func _process(delta):
 			collect_bush()
 
 		return
+		
+	if collecting_mud:
 
+		collect_timer += delta
+
+		if collect_timer >= collect_interval:
+			collect_timer = 0
+			collect_mud()
+
+		return
 
 	if moving:
 
@@ -44,7 +55,9 @@ func _process(delta):
 			moving = false
 
 			if target_bush:
-				collecting = true
+				collecting_bush = true
+			elif target_mud:
+				collecting_mud = true
 
 			return
 
@@ -61,4 +74,13 @@ func collect_bush():
 		get_parent().update_food()
 	else:
 		target_bush = null
-		collecting = false
+		collecting_bush = false
+
+func collect_mud():
+
+	if target_mud and target_mud.collect():
+		GameData.mud += 1
+		get_parent().update_mud()
+	else:
+		target_mud = null
+		collecting_mud = false

@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://rxi6iu3lucpd" path="res://Assets/Fonts/Axolotl.ttf" id="7_5wyu1"]
 [ext_resource type="Texture2D" uid="uid://rjakjy260biq" path="res://Assets/Nest01.png" id="8_2cgwh"]
 [ext_resource type="Script" uid="uid://cqhhgarubw81u" path="res://Scripts/Tienda.gd" id="8_iaow0"]
+[ext_resource type="PackedScene" uid="uid://bwdb7lvffwmpm" path="res://Scenes/Prefabs/mud.tscn" id="8_qpfo2"]
 [ext_resource type="Texture2D" uid="uid://ryjitckyg2kh" path="res://Assets/Ant01.png" id="9_iaow0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3aeo"]
@@ -52,6 +53,12 @@ position = Vector2(48, 80)
 [node name="Bush5" parent="." unique_id=903093328 instance=ExtResource("6_i3aeo")]
 position = Vector2(112, 64)
 
+[node name="Mud" parent="." unique_id=1546510766 instance=ExtResource("8_qpfo2")]
+position = Vector2(32, 160)
+
+[node name="Mud2" parent="." unique_id=1874520532 instance=ExtResource("8_qpfo2")]
+position = Vector2(128, 160)
+
 [node name="Queen" parent="." unique_id=1470953478 instance=ExtResource("4_ys1qc")]
 position = Vector2(64, 160)
 
@@ -94,6 +101,20 @@ theme_override_font_sizes/font_size = 21
 text = "Food:"
 
 [node name="FoodVar" type="Label" parent="UI/HBoxContainer" unique_id=688113014]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "000"
+
+[node name="Label3" type="Label" parent="UI/HBoxContainer" unique_id=1539651664]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("7_5wyu1")
+theme_override_font_sizes/font_size = 21
+text = "Mud:"
+
+[node name="MudVar" type="Label" parent="UI/HBoxContainer" unique_id=700776064]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
 theme_override_fonts/font = ExtResource("7_5wyu1")

@@ -16,10 +16,15 @@ func _on_salir_button_released() -> void:
 
 
 func _on_tuneles_button_released() -> void:
-	GameData.capacity +=1
-	get_parent().update_cap()
+	if GameData.mud > 0:
+		GameData.capacity +=1
+		get_parent().update_cap()
 
 
 func _on_obreras_button_released() -> void:
-	GameData.capacity -= 1
-	get_parent().spawn_ant()
+	if GameData.food > 0 and GameData.capacity > 0:
+		GameData.food -= 1
+		GameData.capacity -= 1
+		get_parent().update_cap()
+		get_parent().update_food()
+		get_parent().spawn_ant()
