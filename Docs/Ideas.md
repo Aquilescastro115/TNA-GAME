@@ -30,11 +30,10 @@ Eventos random:
 tipos de recursos:
 - Comida
 - materiales:
-    Barro
+	Barro
 - Capacidad de hormigero
 
 -------------------------
 
 Posibles updates:
 - hormiga reina que pueda conquistar diferentes sectores con sus biomes exclusivos, conquistando cada sector con un hormigero plantado
-

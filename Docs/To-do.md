@@ -11,7 +11,7 @@ Para trabajar en esto hay que cumplir ciertos objetivos, marca con una flecha y 
 ## Objetivos (Checklist)
 
 - [x] Hacer reina
-- [ ] Hacer hormiga
+- [X] Hacer hormiga
 - [ ] Pulir hormiga
 - [ ] Pulir reina
 - [ ] Inteligencia artificial de hormigas (movimiento autonomo solamente)

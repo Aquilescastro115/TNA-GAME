@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ow33boko3j25"]
+
+[ext_resource type="Script" uid="uid://cuivjnei2j66r" path="res://Scripts/Generation/world.gd" id="1_a02cp"]
+[ext_resource type="Texture2D" uid="uid://q5ce38q3qjwa" path="res://Assets/GroundTilesAtlas.png" id="2_go701"]
+[ext_resource type="PackedScene" uid="uid://oq67xl35e1yo" path="res://Scenes/Prefabs/Queen.tscn" id="3_8j60k"]
+[ext_resource type="Script" uid="uid://bejwjf1gjnhj1" path="res://Scripts/camera.gd" id="4_fo5ed"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a7ea"]
+texture = ExtResource("2_go701")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8j60k"]
+sources/0 = SubResource("TileSetAtlasSource_5a7ea")
+
+[node name="World" type="Node2D" unique_id=488617999]
+script = ExtResource("1_a02cp")
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=775964725]
+tile_set = SubResource("TileSet_8j60k")
+
+[node name="Queen" parent="." unique_id=91645211 instance=ExtResource("3_8j60k")]
+position = Vector2(88, 159)
+
+[node name="Camera2D" type="Camera2D" parent="Queen" unique_id=2116285219]
+script = ExtResource("4_fo5ed")
+metadata/_edit_lock_ = true

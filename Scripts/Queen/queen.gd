@@ -20,8 +20,8 @@ func _ready():
 
 func _process(delta):
 
+	# --- RECOLECCIÓN ---
 	if collecting_bush:
-
 		collect_timer += delta
 
 		if collect_timer >= collect_interval:
@@ -31,7 +31,6 @@ func _process(delta):
 		return
 		
 	if collecting_mud:
-
 		collect_timer += delta
 
 		if collect_timer >= collect_interval:
@@ -40,31 +39,33 @@ func _process(delta):
 
 		return
 
+	# --- MOVIMIENTO ---
 	if moving:
 
-		var diff = target_position - global_position
-		var move = Vector2.ZERO
+		var direction = target_position - global_position
+		var distance = direction.length()
 
-		if abs(diff.x) > 5:
-			move.x = sign(diff.x)
-
-		elif abs(diff.y) > 5:
-			move.y = sign(diff.y)
-
-		else:
+		# Si ya llegó
+		if distance < 5:
 			moving = false
 
 			if target_bush:
 				collecting_bush = true
+				collect_timer = 0
 			elif target_mud:
 				collecting_mud = true
+				collect_timer = 0
 
 			return
 
-		global_position += move * speed * delta
+		# Normalizar dirección (CLAVE para movimiento diagonal)
+		direction = direction.normalized()
 
-		if move.length() > 0:
-			rotation = move.angle()
+		# Mover
+		global_position += direction * speed * delta
+
+		# Rotación hacia donde se mueve
+		rotation = direction.angle()
 
 
 func collect_bush():
