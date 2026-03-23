@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d3ulqvtaqaawh"]
+
+[ext_resource type="Script" uid="uid://14ndpy8ej78a" path="res://Scripts/ui/main_menu.gd" id="1_28flt"]
+
+[node name="MainMenu" type="Control" unique_id=2095461828]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_28flt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1162718346]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NewGame" type="Button" parent="VBoxContainer" unique_id=606555093]
+layout_mode = 2
+
+[node name="LoadGame" type="Button" parent="VBoxContainer" unique_id=65045584]
+layout_mode = 2
+
+[node name="Instagram(dc)" type="Button" parent="VBoxContainer" unique_id=668226574]
+layout_mode = 2
+
+[node name="Instagram(pc)" type="Button" parent="VBoxContainer" unique_id=932461804]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=980732264]
+layout_mode = 2

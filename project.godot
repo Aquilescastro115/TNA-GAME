@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameData="*uid://cdr2j3fqgghsn"
+SaveSystem="*uid://dh8hmfjdbe7pw"
 
 [display]
 
