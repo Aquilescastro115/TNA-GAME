@@ -22,7 +22,7 @@ Para trabajar en esto hay que cumplir ciertos objetivos, marca con una flecha y 
 - [ ] Hacer eventos aleatorios (tanto enemigos como cosas random)
 - [ ] Separar obreras y soldados
 - [ ] Sistema rock, paper, scisor de batalla
-- [ ] Hacer menu principal
+- [X] Hacer menu principal --> En proceso (Diegsos)
 - [ ] Hacer pantalla de derrota
 - [ ] Hacer pantalla de victoria
 - [ ] Hacer splash de inicio (como de team, por lo que hay que elegir un nombre y logo de team)
