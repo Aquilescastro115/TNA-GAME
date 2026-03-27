@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var tienda = $"../Canvas/Tienda"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -12,6 +13,6 @@ func _process(delta: float) -> void:
 
 #Esta funcion se dispara al apretar el nido
 func _on_touch_screen_button_released() -> void:
-	$"../Tienda".show()
+	tienda.show()
 
 #todo Interfaz grafica de nido

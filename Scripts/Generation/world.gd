@@ -1,8 +1,25 @@
 extends Node2D
 
 @onready var tilemap = $Terrain
+@export var bush_scene: PackedScene
+@export var mud_scene: PackedScene
+
+@onready var nest = $Nest
+
+@onready var food_label = $Canvas/UI/HBoxContainer/FoodVar
+@onready var cap_label = $Canvas/UI/HBoxContainer/CapVar
+@onready var mud_label = $Canvas/UI/HBoxContainer/MudVar
+
+@export var ant_scene: PackedScene
+
 
 const SOURCE_ID = 0
+
+const MAP_WIDTH = 50
+const MAP_HEIGHT = 50
+
+var bush_density = 0.08
+var mud_density = 0.05
 
 @onready var queen = $Queen
 
@@ -30,11 +47,12 @@ func _process(delta: float) -> void:
 	pass
 
 func generate_world():
-	for x in 50:
-		for y in 50:
+	for x in MAP_WIDTH:
+		for y in MAP_HEIGHT:
 			
 			var coords = get_grass_tile(x, y)
 			tilemap.set_cell(Vector2i(x,y), SOURCE_ID, coords)
+			generate_resources(x, y)
 func get_grass_tile(x, y):
 	var n = noise.get_noise_2d(x, y)
 	if n < -0.5:
@@ -107,3 +125,41 @@ func handle_click(pos):
 	queen.target_bush = null
 	queen.moving = true
 	queen.selected = false
+
+func generate_resources(x, y):
+
+	var n = noise.get_noise_2d(x + 1000, y + 1000) # offset importante
+
+	# BUSHES
+	if n > 0.4 and randf() < bush_density:
+		spawn_bush(x, y)
+
+	# MUD
+	elif n < -0.4 and randf() < mud_density:
+		spawn_mud(x, y)
+
+
+func spawn_bush(x, y):
+	var bush = bush_scene.instantiate()
+	bush.global_position = tilemap.map_to_local(Vector2i(x,y))
+	add_child(bush)
+
+
+func spawn_mud(x, y):
+	var mud = mud_scene.instantiate()
+	mud.global_position = tilemap.map_to_local(Vector2i(x,y))
+	add_child(mud)
+
+func update_food():
+	food_label.text = str(GameData.food)
+
+func update_cap():
+	cap_label.text = str(GameData.capacity)
+
+func update_mud():
+	mud_label.text = str(GameData.mud)
+
+func spawn_ant():
+	var ant = ant_scene.instantiate()
+	ant.global_position = nest.global_position
+	add_child(ant)

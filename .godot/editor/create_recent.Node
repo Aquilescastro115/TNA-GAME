@@ -1,3 +1,4 @@
+CanvasLayer
 Button
 VBoxContainer
 Camera2D
@@ -12,4 +13,3 @@ Control
 Panel
 CollisionShape2D
 Area2D
-TileMap

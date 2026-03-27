@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://ow33boko3j25"]
 
 [ext_resource type="Script" uid="uid://cuivjnei2j66r" path="res://Scripts/Generation/world.gd" id="1_a02cp"]
+[ext_resource type="PackedScene" uid="uid://dl24rliymdbms" path="res://Scenes/Prefabs/Bush.tscn" id="2_5ukr8"]
 [ext_resource type="Texture2D" uid="uid://q5ce38q3qjwa" path="res://Assets/GroundTilesAtlas.png" id="2_go701"]
 [ext_resource type="PackedScene" uid="uid://oq67xl35e1yo" path="res://Scenes/Prefabs/Queen.tscn" id="3_8j60k"]
+[ext_resource type="PackedScene" uid="uid://bwdb7lvffwmpm" path="res://Scenes/Prefabs/mud.tscn" id="3_o06y3"]
+[ext_resource type="PackedScene" uid="uid://dherjans7h65h" path="res://Scenes/Prefabs/Ant.tscn" id="4_0fj1v"]
 [ext_resource type="Script" uid="uid://bejwjf1gjnhj1" path="res://Scripts/camera.gd" id="4_fo5ed"]
+[ext_resource type="PackedScene" uid="uid://304oaubfo43m" path="res://Scenes/Prefabs/tienda.tscn" id="7_5v1tr"]
+[ext_resource type="PackedScene" uid="uid://c7jy34gmfw4ge" path="res://Scenes/Prefabs/ui.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://cii0yrq4syrgm" path="res://Scenes/Prefabs/Nest.tscn" id="8_k7acu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a7ea"]
 texture = ExtResource("2_go701")
@@ -23,13 +29,27 @@ sources/0 = SubResource("TileSetAtlasSource_5a7ea")
 
 [node name="World" type="Node2D" unique_id=488617999]
 script = ExtResource("1_a02cp")
+bush_scene = ExtResource("2_5ukr8")
+mud_scene = ExtResource("3_o06y3")
+ant_scene = ExtResource("4_0fj1v")
 
 [node name="Terrain" type="TileMapLayer" parent="." unique_id=775964725]
 tile_set = SubResource("TileSet_8j60k")
 
+[node name="Nest" parent="." unique_id=2015448920 instance=ExtResource("8_k7acu")]
+position = Vector2(288, 288)
+
+[node name="Canvas" type="CanvasLayer" parent="." unique_id=1138456699]
+
+[node name="UI" parent="Canvas" unique_id=1074873964 instance=ExtResource("7_o06y3")]
+
+[node name="Tienda" parent="Canvas" unique_id=914673237 instance=ExtResource("7_5v1tr")]
+
 [node name="Queen" parent="." unique_id=91645211 instance=ExtResource("3_8j60k")]
-position = Vector2(88, 159)
+position = Vector2(288, 288)
 
 [node name="Camera2D" type="Camera2D" parent="Queen" unique_id=2116285219]
 script = ExtResource("4_fo5ed")
 metadata/_edit_lock_ = true
+
+[editable path="Canvas/UI"]

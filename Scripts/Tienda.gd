@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -18,13 +17,15 @@ func _on_salir_button_released() -> void:
 func _on_tuneles_button_released() -> void:
 	if GameData.mud > 0:
 		GameData.capacity +=1
-		get_parent().update_cap()
+		GameData.mud -=1
+		get_parent().get_parent().update_cap()
+		get_parent().get_parent().update_mud()
 
 
 func _on_obreras_button_released() -> void:
 	if GameData.food > 0 and GameData.capacity > 0:
 		GameData.food -= 1
 		GameData.capacity -= 1
-		get_parent().update_cap()
-		get_parent().update_food()
-		get_parent().spawn_ant()
+		get_parent().get_parent().update_cap()
+		get_parent().get_parent().update_food()
+		get_parent().get_parent().spawn_ant()

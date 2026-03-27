@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://c7jy34gmfw4ge"]
+
+[ext_resource type="FontFile" uid="uid://rxi6iu3lucpd" path="res://Assets/Fonts/Axolotl.ttf" id="1_qbjo8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3aeo"]
+bg_color = Color(0.18431373, 0.12941177, 0.06666667, 0.8117647)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[node name="UI" type="Control" unique_id=1074873964]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=315296370]
+layout_mode = 0
+offset_right = 176.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i3aeo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2111604906]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=604066048]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("1_qbjo8")
+theme_override_font_sizes/font_size = 21
+text = "Cap:"
+
+[node name="CapVar" type="Label" parent="HBoxContainer" unique_id=679001177]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("1_qbjo8")
+theme_override_font_sizes/font_size = 21
+text = "000"
+
+[node name="Label2" type="Label" parent="HBoxContainer" unique_id=793848625]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("1_qbjo8")
+theme_override_font_sizes/font_size = 21
+text = "Food:"
+
+[node name="FoodVar" type="Label" parent="HBoxContainer" unique_id=838016159]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("1_qbjo8")
+theme_override_font_sizes/font_size = 21
+text = "000"
+
+[node name="Label3" type="Label" parent="HBoxContainer" unique_id=2065985198]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("1_qbjo8")
+theme_override_font_sizes/font_size = 21
+text = "Mud:"
+
+[node name="MudVar" type="Label" parent="HBoxContainer" unique_id=75556028]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.9607843)
+theme_override_fonts/font = ExtResource("1_qbjo8")
+theme_override_font_sizes/font_size = 21
+text = "000"
