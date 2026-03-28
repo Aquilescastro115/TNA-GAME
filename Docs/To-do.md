@@ -15,16 +15,22 @@ Para trabajar en esto hay que cumplir ciertos objetivos, marca con una flecha y 
 - [ ] Pulir hormiga
 - [ ] Pulir reina
 - [ ] Inteligencia artificial de hormigas (movimiento autonomo solamente)
-- [ ] Generacion aleatoria de recursos
+- [x] Generacion aleatoria de recursos
 - [ ] Terminar tienda --> En proceso (pato)
 - [ ] Terminar soundtrack (playlist aleatoria)
 - [ ] Hacer enemigos
 - [ ] Hacer eventos aleatorios (tanto enemigos como cosas random)
 - [ ] Separar obreras y soldados
 - [ ] Sistema rock, paper, scisor de batalla
-- [X] Hacer menu principal --> En proceso (Diegsos)
+
+Pantallas
+
+- [ ] Hacer menu principal --> En proceso (Diegsos)
 - [ ] Hacer pantalla de derrota
 - [ ] Hacer pantalla de victoria
+
+Marketing
+
 - [ ] Hacer splash de inicio (como de team, por lo que hay que elegir un nombre y logo de team)
 - [ ] Hacer pagina de itchio
 - [ ] Publicitar salida del juego en celular
