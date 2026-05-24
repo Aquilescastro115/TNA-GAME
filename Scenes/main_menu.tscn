@@ -1,32 +1,57 @@
 [gd_scene format=3 uid="uid://d3ulqvtaqaawh"]
 
-[ext_resource type="Script" uid="uid://14ndpy8ej78a" path="res://Scripts/ui/main_menu.gd" id="1_28flt"]
+[ext_resource type="Script" uid="uid://dy6rrpdmh4qky" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://h7jnx1a541ac" path="res://Assets/Background01.png" id="2_48xlc"]
 
-[node name="MainMenu" type="Control" unique_id=2095461828]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MainMenu" type="CanvasLayer" unique_id=1524348573]
 script = ExtResource("1_28flt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1162718346]
-layout_mode = 0
+[node name="Background" type="TextureRect" parent="." unique_id=1827656454]
 offset_right = 40.0
 offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_48xlc")
 
-[node name="NewGame" type="Button" parent="VBoxContainer" unique_id=606555093]
+[node name="MenuInterface" type="MarginContainer" parent="." unique_id=1235629367]
+offset_right = 40.0
+offset_bottom = 59.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MainLayout" type="VBoxContainer" parent="MenuInterface" unique_id=872605079]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="GameTitle" type="Label" parent="MenuInterface/MainLayout" unique_id=489815300]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "TNA(Cambiar futuro)"
+horizontal_alignment = 1
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="MenuInterface/MainLayout" unique_id=181960338]
 layout_mode = 2
 
-[node name="LoadGame" type="Button" parent="VBoxContainer" unique_id=65045584]
+[node name="PlayButton" type="Button" parent="MenuInterface/MainLayout/ButtonsContainer" unique_id=1269803772]
+custom_minimum_size = Vector2(120, 24)
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Jugar"
 
-[node name="Instagram(dc)" type="Button" parent="VBoxContainer" unique_id=668226574]
+[node name="OptionsButton" type="Button" parent="MenuInterface/MainLayout/ButtonsContainer" unique_id=645806923]
+custom_minimum_size = Vector2(120, 24)
 layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Opciones"
 
-[node name="Instagram(pc)" type="Button" parent="VBoxContainer" unique_id=932461804]
+[node name="ExitButton" type="Button" parent="MenuInterface/MainLayout/ButtonsContainer" unique_id=1774007854]
+custom_minimum_size = Vector2(120, 24)
 layout_mode = 2
-
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=980732264]
-layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Salir"
