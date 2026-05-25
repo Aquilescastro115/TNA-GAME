@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bwdb7lvffwmpm" path="res://Scenes/Prefabs/mud.tscn" id="3_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dherjans7h65h" path="res://Scenes/Prefabs/Ant.tscn" id="4_0fj1v"]
 [ext_resource type="Script" uid="uid://bejwjf1gjnhj1" path="res://Scripts/camera.gd" id="4_fo5ed"]
-[ext_resource type="PackedScene" uid="uid://304oaubfo43m" path="res://Scenes/Prefabs/tienda.tscn" id="7_5v1tr"]
-[ext_resource type="PackedScene" uid="uid://c7jy34gmfw4ge" path="res://Scenes/Prefabs/ui.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" path="res://Scenes/Prefabs/tienda.tscn" id="7_5v1tr"]
+[ext_resource type="PackedScene" path="res://Scenes/Prefabs/ui.tscn" id="7_o06y3"]
 [ext_resource type="PackedScene" uid="uid://cii0yrq4syrgm" path="res://Scenes/Prefabs/Nest.tscn" id="8_k7acu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5a7ea"]

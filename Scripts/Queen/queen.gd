@@ -2,6 +2,9 @@ extends Node2D
 
 @export var speed = 80
 
+@export var map_width = 800
+@export var map_height = 800
+
 var selected = false
 var target_position = Vector2.ZERO
 var moving = false
@@ -16,7 +19,6 @@ var collect_interval = 1.0
 
 func _ready():
 	target_position = global_position
-
 
 func _process(delta):
 
@@ -63,6 +65,10 @@ func _process(delta):
 
 		# Mover
 		global_position += direction * speed * delta
+
+		# Limitar dentro del mapa
+		global_position.x = clamp(global_position.x, 0, map_width)
+		global_position.y = clamp(global_position.y, 0, map_height)
 
 		# Rotación hacia donde se mueve
 		rotation = direction.angle()
